@@ -3,13 +3,11 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import Quadro from '../src/Components/Quadro'
 
 function App() {
-  return (
-    <div>
-      <h1>Meu Kanban</h1>
-    </div>
-  );
+  return <Quadro />
+
 }
 
 export default App;
