@@ -1,11 +1,9 @@
 
-function Coluna (coluna){
-
-
+function Coluna (props){
     return(
-        <section className="coluna">
-            <h2> { coluna.nome }</h2>
-        </section>
+        <div className="coluna">
+            <h2> { props.nome }</h2>
+        </div>
     
     )
 }

@@ -1,12 +1,20 @@
 import Coluna from '../Components/Coluna'
 
 function Quadro(){
+    const colunas = [
+        {id: 1, nome: 'To do'},
+        {id: 2, nome: 'Doing'},
+        {id: 3, nome: 'Done'}
+    ];
+
+
     return(
         <div className = 'quadro'>
             <h1> Meu Kanban </h1>
-            <Coluna nome='To do' />
-            <Coluna nome='Doing' />
-            <Coluna nome='Done' />
+          
+          {colunas.map((coluna) => (
+            <coluna key={coluna.id} nome={coluna.nome} />
+          ))}
 
 
         </div>
