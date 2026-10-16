@@ -14,7 +14,7 @@ function Quadro(){
           
           {
             colunas.map((coluna) => {
-                return <Coluna nome={coluna.nome} />
+                return <Coluna key={coluna.id} nome={coluna.nome} />
             }
             )
 
