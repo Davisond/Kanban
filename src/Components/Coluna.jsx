@@ -14,6 +14,9 @@ function Coluna (props){
             })
 
         }
+
+        <button onClick={() => props.coluna_onAdicionar(props.id)}>
+             Adicionar card </button>
     </div>
     )
 }
