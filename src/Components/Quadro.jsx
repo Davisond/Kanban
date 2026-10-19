@@ -1,4 +1,5 @@
 import Coluna from '../Components/Coluna';
+import './Quadro.css'
 import Card from '../Components/Card';
 
 function Quadro(){
@@ -16,14 +17,13 @@ function Quadro(){
 
     return(
         <div className = 'quadro'>
-            <h1> Meu Kanban </h1>       
-          {
-            colunas.map((coluna) => {
-                return <Coluna key={coluna.id} id={coluna.id} nome={coluna.nome} cards={cards} /> }
-                
-                
-            )
-          }
+                <h1> Meu Kanban </h1>
+            <div className='colunas'>
+            {
+                colunas.map((coluna) => {return <Coluna key={coluna.id} id={coluna.id} nome={coluna.nome} cards={cards} /> })
+            }
+            </div>
+
         </div>
     );
 }

@@ -8,7 +8,6 @@ function Coluna (props){
         <div className="coluna">
             <h2> { props.nome }</h2>
         
-    
         {
             cardColuna.map((card) => {
                 return( <Card titulo = {card.titulo} />   )

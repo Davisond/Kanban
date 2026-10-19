@@ -1,0 +1,23 @@
+.quadro{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+}
+.colunas{
+    display: flex;
+    gap: 16px;
+}
+.coluna{
+    flex: 1;
+    background: #ebecf0;
+    border-radius: 8px;
+    padding: 12px;
+}
+.card{
+    background: white;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
