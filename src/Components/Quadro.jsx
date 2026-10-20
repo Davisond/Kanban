@@ -35,12 +35,29 @@ function Quadro(){
             })
         )
     }
+
+    function moverCard(idCard, idColunaDestino){
+        setCards(
+            cards.map((card)=>{
+                if(card.id == idCard){
+                    return{ ...card, idColuna: idColunaDestino }
+                }
+            return card
+            })
+
+        )
+
+    }
+
+
+
+
     return(
         <div className = 'quadro'>
                 <h1> Meu Kanban </h1>
             <div className='colunas'>
             {
-                colunas.map((coluna) => {return <Coluna key={coluna.id} id={coluna.id} nome={coluna.nome} cards={cards} coluna_onAdicionar={ adicionarCard } onEditar={editarCard}/> })
+                colunas.map((coluna) => {return <Coluna key={coluna.id} id={coluna.id} nome={coluna.nome} cards={cards} coluna_onAdicionar={ adicionarCard } onEditar={editarCard} onMover={moverCard}/> })
 
             }
             </div>

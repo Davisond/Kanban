@@ -9,12 +9,9 @@ function Card (props){
         setEditado(false)
     }
 
-    
 
-
-    
     return(
-        <div className='card'>
+        <div className='card' draggable onDragStart={(e)=>{e.dataTransfer.setData('text/plain', props.id)}}>
             {editando? (
                 <input 
                     value = {texto}

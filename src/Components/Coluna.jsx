@@ -5,9 +5,11 @@ function Coluna (props){
 
 
     return(
-        <div className="coluna">
+        <div className="coluna" onDragOver={(e)=>{e.preventDefault()}} onDrop={(e)=>{const idCard = Number(e.dataTransfer.getData('text/plain'))
+        props.onMover(idCard, props.id)} }>
+            
+            
             <h2> { props.nome }</h2>
-        
         {
             cardColuna.map((card) => {
                 return( <Card key={card.id} id={card.id} titulo={card.titulo} onEditar={props.onEditar} />   )
