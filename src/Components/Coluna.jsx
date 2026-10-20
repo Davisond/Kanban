@@ -10,7 +10,7 @@ function Coluna (props){
         
         {
             cardColuna.map((card) => {
-                return( <Card titulo = {card.titulo} />   )
+                return( <Card key={card.id} id={card.id} titulo={card.titulo} onEditar={props.onEditar} />   )
             })
 
         }

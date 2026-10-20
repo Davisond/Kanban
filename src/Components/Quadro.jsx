@@ -23,15 +23,24 @@ function Quadro(){
             idColuna: idColuna
         }
         setCards([...cards, novoCard])
-
     }
 
+    function editarCard(idCard, novoTitulo){
+        setCards(
+            cards.map((card)=>{
+                if (card.id == idCard){
+                    return { ...card, titulo: novoTitulo }
+                }
+                return card
+            })
+        )
+    }
     return(
         <div className = 'quadro'>
                 <h1> Meu Kanban </h1>
             <div className='colunas'>
             {
-                colunas.map((coluna) => {return <Coluna key={coluna.id} id={coluna.id} nome={coluna.nome} cards={cards} coluna_onAdicionar={ adicionarCard } /> })
+                colunas.map((coluna) => {return <Coluna key={coluna.id} id={coluna.id} nome={coluna.nome} cards={cards} coluna_onAdicionar={ adicionarCard } onEditar={editarCard}/> })
 
             }
             </div>
